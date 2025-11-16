@@ -95,6 +95,8 @@ underwater_enhancement.m
 - Reduced blue/green dominance  
 
 ---
+### **Final Output**
+![alt text](<WhatsApp Image 2025-11-16 at 19.37.45_a3012f94.jpg>)
 
 ##  References
 - MATLAB Functions: `rgb2lab`, `lab2rgb`, `adapthisteq`, `imadjust`, `stretchlim`, `imhist`  
