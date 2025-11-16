@@ -1,45 +1,118 @@
-# Project Name
+# Underwater Image Enhancement (L\*a\*b\* Based Method)
 
-### Project Description:
-#### Summary - 
+##  Project Description
+This project enhances underwater images using a color–space–based technique implemented in MATLAB. The algorithm corrects color distortions, restores suppressed red tones, and improves contrast by processing the image in the **CIE L\*a\*b\*** color space. A histogram comparison is also generated to visualize improvement in color distribution.
 
-#### Course concepts used - 
-1. -
-2. -
-3. -
-   
-#### Additional concepts used -
-1. -
-2. -
-   
-#### Dataset - 
-Link and/or Explanation if generated
+---
 
-#### Novelty - 
-1. -
-2. -
-3. -
-   
-### Contributors:
-1. Name (SRN)
-2. Name (SRN)
+##  Summary
+Underwater images often appear bluish/greenish due to loss of red wavelengths and reduced visibility.  
+This project enhances the image using:
 
-### Steps:
-1. Clone Repository
-```git clone https://github.com/Digital-Image-Processing-PES-ECE/project-name.git ```
+1. **RGB → L\*a\*b\*** conversion  
+2. **CLAHE enhancement of the L-channel**  
+3. **Chrominance correction on a and b channels**  
+4. **Reconstruction using lab2rgb**  
+5. **Histogram comparison on R/G/B channels**
 
-2. Install Dependencies
-```pip install -r requirements.txt```
+The method is simple, fast, and produces significantly improved visibility and color balance.
 
-3. Run the Code
-```python main.py (for eg.)```
+---
 
-### Outputs:
-* Important intermediate steps
-* Final output images 
+##  Course Concepts Used
+- RGB to L\*a\*b\* Conversion  
+- Adaptive Histogram Equalization (CLAHE)  
+- Normalization and Contrast Stretching  
+- Image Reconstruction  
+- Histogram Analysis  
 
-### References:
-1. -
-2. -
-   
-### Limitations and Future Work:
+---
+
+##  Additional Concepts Used
+- Chrominance–Luminance Separation  
+- Pixel Intensity Remapping  
+- Logarithmic Histogram Visualization  
+
+---
+
+##  Dataset
+Input underwater images are stored in the **data/** folder.
+
+Users may add:
+- Real underwater photos  
+- UIEB / EUVP underwater datasets  
+- Any `.png` or `.jpg` image  
+
+Example used in script:
+image_filename = '467_img_.png';
+
+
+---
+
+##  How to Run the Code
+
+1. Place input images inside:
+
+data/
+
+
+2. Run the MATLAB script:
+
+underwater_enhancement.m
+
+
+3. The script will display:
+- Original vs Enhanced image  
+- Histogram comparison (R/G/B channels)
+
+4. Save enhanced images into:
+
+
+3. The script will display:
+- Original vs Enhanced image  
+- Histogram comparison (R/G/B channels)
+
+4. Save enhanced images into:
+
+
+---
+
+##  Output Description
+
+### **1. Image Comparison**
+- **Left:** Original underwater image  
+- **Right:** Enhanced image using L\*a\*b\* correction  
+
+### **2. Histogram Comparison**
+- Shows R, G, B histograms  
+- Logarithmic scale highlights improved color spread  
+- Demonstrates recovery of red tones and contrast
+
+### **Enhancement Results**
+- Improved luminance  
+- Better contrast  
+- Balanced color tones  
+- Reduced blue/green dominance  
+
+---
+
+##  References
+- MATLAB Functions: `rgb2lab`, `lab2rgb`, `adapthisteq`, `imadjust`, `stretchlim`, `imhist`  
+- Gonzalez & Woods, *Digital Image Processing*, 4th Edition  
+
+---
+
+##  Limitations
+- Severely degraded images may not fully recover  
+- No haze or scattering compensation  
+- Can produce mild color shifts for extreme cases  
+
+---
+
+##  Future Improvements
+- Underwater dehazing methods  
+- Multi-level Retinex enhancement  
+- Automated output saving  
+- Quality metrics (UIQM, SSIM, PSNR)  
+- Multi-stage enhancement pipeline  
+
