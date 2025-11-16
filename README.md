@@ -98,6 +98,17 @@ underwater_enhancement.m
 ### **Final Output**
 ![alt text](<WhatsApp Image 2025-11-16 at 19.37.45_a3012f94.jpg>)
 
+---
+
+## Contributors
+| Name | SRN |
+|------|-----|
+| Bhavanesh A Mali Patil | PES1UG323EC070 |
+| Ayush M  | PES1UG323EC068 |
+| Chirag M K| PES1UG323EC080 |
+
+---
+
 ##  References
 - MATLAB Functions: `rgb2lab`, `lab2rgb`, `adapthisteq`, `imadjust`, `stretchlim`, `imhist`  
 - Gonzalez & Woods, *Digital Image Processing*, 4th Edition  
